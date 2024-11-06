@@ -4,11 +4,9 @@ name: Generate PDF
 on:
   push:
     branches:
-      - master
       - main
   pull_request:
     branches:
-      - master
       - main
 jobs:
   build:
@@ -18,7 +16,7 @@ jobs:
       CI: 'true'
     defaults:
       run:
-        working-directory: "."
+        working-directory: "website"
     strategy:
       matrix:
         node-version: [18.x]
